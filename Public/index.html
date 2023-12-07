@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Assignment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/87f6f45306.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+  <h1></h1>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+
+      <div class="bg-dark col-auto col-md-2 col-lg- min-vh-100">
+        <div class="bg-colour p-2">
+          <a class="d-flex text-decoration-none mt-1 align-items-center text-muted">
+            <span class="fs-5 d-none d-sm-inline">Dashboard Kit</span>
+          </a>
+          <ul class="nav nav-pills flex-column mt-4">
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#">
+                <i class="fs-6 fa-solid fa-chart-pie"></i> <span class="fs-6 ms-1 d-none d-sm-inline">Overview</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#">
+                <i class="fs-6 fa-solid fa-ticket"></i> <span class="fs-6 ms-1 d-none d-sm-inline">Tickets</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#">
+                <i class="fs-6 fa-solid fa-lightbulb"></i> <span class="fs-6 ms-1 d-none d-sm-inline">Ideas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#" tabindex="-1" aria-disabled="true">
+                <i class="fs-6 fa-solid fa-users"></i> <span class="fs-6 ms-1 d-none d-sm-inline">Contacts</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#" tabindex="-1" aria-disabled="true">
+                <i class="fs-6 fa-solid fa-user"></i> <span class="fs-6 ms-1 d-none d-sm-inline">Agents</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#" tabindex="-1" aria-disabled="true">
+                <i class="fs-6 fa-solid fa-book"></i> <span class="fs-6 ms-1 d-none d-sm-inline">Articles</span>
+              </a>
+            </li>
+
+            <!-- Second part of the dashboard -->
+            <hr class="bg-secondary border-top border-secondary" />
+            <a class="nav-link text-muted" href="#" tabindex="-1" aria-disabled="true">
+              <i class="fs-6 fa-solid fa-gear"></i> <span class="fs-6 ms-1 d-none d-sm-inline">Settings</span>
+            </a>
+            <a class="nav-link text-muted" href="#" tabindex="-1" aria-disabled="true">
+              <i class="fs-6 fa-solid fa-award"></i> <span class="fs-6 ms-1 d-none d-sm-inline">Subscription</span>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <!-- Sidebar Ends -->
+
+      <!-- 1. Header -->
+      <!-- TODO Viewport -->
+      <div id="page-content" class="container-fluid px-4 bg-light bg-light min-vh-100">
+        <nav class="navbar navbar-expand-lg navbar-light py-4 px-4">
+          <!-- TODO ???? flex column? -->
+          <div class="d-flex align-items-center">
+            <div class="p-2 flex-grow-1">
+              <h6 class="list-group-item list-group-item-action text-active me-5" href="#">Overview</h6>
+            </div>
+            <div class="p-2">
+              <a class="list-group-item list-group-item-action text-muted" href="#">
+                <i class="fas fa-thin fa-magnifying-glass me-1"></i>
+              </a>
+            </div>
+
+            <div class="p-2">
+              <a class="list-group-item list-group-item-action text-muted" href="#">
+                <i class="fa-solid fa-bell me-3"></i>
+              </a>
+            </div>
+            <div class="p-2 flex-grow-1">
+              <p class="list-group-item list-group-item-action text-active me-5 " href="#">User Name</p>
+            </div>
+            <!-- TODO Image-->
+
+            <a class="list-group-item list-group-item-action" href="#">
+              <img src="/Public/assets/Image1.jpg" class=".img-fluid" alt="Profile Image">
+            </a>
+          </div>
+        </nav>
+
+        <!-- Cards starts here -->
+        <div class="container-fluid px-4">
+
+          <div class="row g-2 my-2">
+            <div class="col-md-12">
+              <div class="p-3 bg-white d-flex justify-content-around align-items-center rounded">
+                <div>
+                  <h3 class="fs-5 text-center">Unresolved</h3>
+                  <p class="fs-2 text-center">60</p>
+                </div>
+                <div>
+                  <h3 class="fs-5 text-center">Overdue</h3>
+                  <p class="fs-2 text-center">16</p>
+                </div>
+                <div>
+                  <h3 class="fs-5 text-center">Open</h3>
+                  <p class="fs-2 text-center">43</p>
+                </div>
+                <div>
+                  <h3 class="fs-5 text-center">On Hold</h3>
+                  <p class="fs-2 text-center">64</p>
+                </div>
+                <div>
+                  <h3 class="fs-5 text-center">One more</h3>
+                  <p class="fs-2 text-center">0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TODO GRAPHIC PART -->
+          <!-- <canvas id="line-chart"></canvas>    
+          <h1>hello Graphic</h1>
+          <img src = "assets/graph.svg" alt="My Happy SVG"/> -->
+          
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="576" height="230" viewBox="0 0 576 230" fill="none">
+            <path d="M-9.1315 228.727C2.88868 196.21 47.3039 118.226 94.0109 119.886C103.742 119.886 118.979 127.08 131.789 126.112C140.947 125.42 162.698 111.998 176.435 63.8443C190.172 15.6905 203.578 1.54545 212.496 1.5765C217.811 1.57644 228.637 11.5386 238.253 59.6932C249.129 102.589 281.526 187.964 324.112 186.304C333.27 186.996 356.051 178.832 373.909 140.641C395.66 97.7452 434.225 16.1051 476.94 16.1051C519.654 16.1051 537.276 72.5 593 75" stroke="#3751FF" stroke-width="2" stroke-linejoin="round"/>
+            </svg> -->
+        
+          <div class="charts">
+
+            <div class="charts-card">
+              <p class="chart-title">Top 5 Products</p>
+              <div>
+                <h3 class="fs-5 text-center">Purchase Orders Jan</h3>
+                <p class="fs-2 text-center">30</p>
+              </div>
+              <div>
+                <h3 class="fs-5 text-center">Purchase Orders Apr</h3>
+                <p class="fs-2 text-center">45</p>
+              </div>
+              <div>
+                <h3 class="fs-5 text-center">Purchase Orders Jul</h3>
+                <p class="fs-2 text-center">50</p>
+              </div>
+              <div id="bar-chart"></div>
+            </div>
+  
+            <div class="charts-card">
+              <p class="chart-title">Purchase and Sales Orders</p>
+              <div id="area-chart"></div>
+            </div>
+  
+          </div>
+          
+
+          <!-- columns start -->
+          <div class="row justify-content-evenly bg-white gx-3">
+            <div class="col-6 gx-3 text-center">
+
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Unresolved Ticket</th>
+                    <th scope="col"></th>
+                    <th class="link-primary h6" scope="col">View Detail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>Waiting on Feature Request</td>
+                    <td></td>
+                    <td>4238</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>Awaiting Customer Response</td>
+                    <td></td>
+                    <td>1005</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>Awaiting Developer Fix</td>
+                    <td></td>
+                    <td>914</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>Pending</td>
+                    <td></td>
+                    <td>281</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+
+
+            <!-- Tasks -->
+
+            <div class="col-6 gx-3 text-center">
+
+              <section class="vh-100" >
+                <div class="container h-100">
+                  <div class="row d-flex justify-content-center align-items-center">
+                    <!-- <div class="col-md-12 col-xl-10"> -->
+            
+              
+                          <table class="table mb-0">
+                            <thead>
+                              <tr>
+                                <th scope="col">Tasks</th>
+                             <!-- <th scope="col"></th>
+                                <th scope="col"></th> -->
+                                <th class="link-primary h6" scope="col">Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="fw-normal">
+                              <th class="align-baseline">
+                              <input type="radio" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label fw-lighter" for="exampleCheck1">Finish Ticket Update</label></th>
+
+                             
+                                <td class="align-baseline">
+                                  <h6 class="mb-0"><span class="badge bg-warning">URGENT</span></h6>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                              <tr class="fw-normal">
+                                <th class="align-baseline">
+                                  <input type="radio" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label fw-lighter" for="exampleCheck1">Create New Ticket Example</label></th>
+                                <td class="align-middle">
+                                  <h6 class="mb-0"><span class="badge bg-success">NEW</span></h6>
+                                </td>   <td>
+                                </td>
+                              </tr>
+                              <tr class="fw-normal">
+                                <!-- <th>
+                                  
+                                </th> -->
+                                <th class="align-baseline">
+                                  <input type="radio" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label fw-lighter" for="exampleCheck1">Update Ticket Report</label></th>
+                                <td class="align-middle">
+                                  <h6 class="mb-0"><span class="badge bg-secondary">Default</span></h6>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                             
+                            </tbody>
+                          </table>
+              
+                        </div>
+                       
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- container fluid -->
+      </div>
+
+      <!-- no code after -->
+
+      <!-- background -->
+    </div>
+    <!-- Non wrap -->
+  </div>
+  <!-- Container fluid -->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+<!-- Js script -->
+  <script  src="main.js"></script>
+
+</body>
+
+</html>

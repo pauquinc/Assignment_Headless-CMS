@@ -1,0 +1,93 @@
+// const dataLine = {
+//     type: 'line',
+//       data: {
+//         labels: ["January", "February", "March", "April", "May", "June", "July"],
+//         datasets: [{
+//             label: "My First dataset",
+//             data: [65, 59, 80, 81, 56, 55, 40],
+//             backgroundColor: [
+//               'rgba(105, 0, 132, .2)',
+//             ],
+//             fill: true,
+//             borderColor: [
+//               'rgba(255, 99, 132, 0.8)',
+//             ],
+//             borderWidth: 2,
+//             tension: 0.4
+//           },
+//           {
+//             label: "My Second dataset",
+//             data: [28, 48, 40, 19, 86, 27, 90],
+//             backgroundColor: [
+//               'rgba(0, 137, 132, .2)',
+//             ],
+//             fill: true,
+//             borderColor: [
+//               'rgba(50, 150, 255, 1)',
+//             ],
+//             borderWidth: 2,
+//             tension: 0.4
+//           }
+//         ]
+//       },
+//       options: {
+//         responsive: true
+//       }
+//   };
+  
+//   new mdb.Chart(document.getElementById('line-chart'), dataLine);
+
+
+const areaChartOptions = {
+  series: [
+    {
+      name: 'Purchase Orders',
+      data: [31, 40, 28, 51, 42, 109, 100],
+    },
+    {
+      name: 'Sales Orders',
+      data: [11, 32, 45, 32, 34, 52, 41],
+    },
+  ],
+  chart: {
+    height: 350,
+    type: 'area',
+    toolbar: {
+      show: false,
+    },
+  },
+  colors: ['#4f35a1', '#246dec'],
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: 'smooth',
+  },
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+  markers: {
+    size: 0,
+  },
+  yaxis: [
+    {
+      title: {
+        text: 'Purchase Orders',
+      },
+    },
+    {
+      opposite: true,
+      title: {
+        text: 'Sales Orders',
+      },
+    },
+  ],
+  tooltip: {
+    shared: true,
+    intersect: false,
+  },
+};
+
+const areaChart = new ApexCharts(
+  document.querySelector('#area-chart'),
+  areaChartOptions
+);
+areaChart.render();
