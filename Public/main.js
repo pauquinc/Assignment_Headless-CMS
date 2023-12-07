@@ -1,51 +1,62 @@
-// const dataLine = {
-//     type: 'line',
-//       data: {
-//         labels: ["January", "February", "March", "April", "May", "June", "July"],
-//         datasets: [{
-//             label: "My First dataset",
-//             data: [65, 59, 80, 81, 56, 55, 40],
-//             backgroundColor: [
-//               'rgba(105, 0, 132, .2)',
-//             ],
-//             fill: true,
-//             borderColor: [
-//               'rgba(255, 99, 132, 0.8)',
-//             ],
-//             borderWidth: 2,
-//             tension: 0.4
-//           },
-//           {
-//             label: "My Second dataset",
-//             data: [28, 48, 40, 19, 86, 27, 90],
-//             backgroundColor: [
-//               'rgba(0, 137, 132, .2)',
-//             ],
-//             fill: true,
-//             borderColor: [
-//               'rgba(50, 150, 255, 1)',
-//             ],
-//             borderWidth: 2,
-//             tension: 0.4
-//           }
-//         ]
-//       },
-//       options: {
-//         responsive: true
-//       }
-//   };
-  
-//   new mdb.Chart(document.getElementById('line-chart'), dataLine);
+// Json Info
+async function getValue() {
+  try {
+    const result = await fetch("data/data.json")
+    const response = await result.json();
+    console.log({ response });
 
 
+    const ticketHolder = document.querySelectorAll('.title')
+    const ticketValue = document.querySelectorAll('.value')
+
+
+    ticketHolder.forEach((hold, element) => {
+      // console.log(element);
+      let purchPurch = document.createElement('p');
+      purchPurch.innerHTML = response.tickets[element].ticket_month;
+      hold.appendChild(purchPurch);
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getValue();
+
+async function getNumber() {
+  try {
+    const result = await fetch("data/data.json")
+    const response = await result.json();
+    console.log({ response });
+
+
+    const ticketHolder = document.querySelectorAll('.title')
+    const ticketValue = document.querySelectorAll('.value')
+
+
+    ticketHolder.forEach((hold, element) => {
+      // console.log(element);
+      let purchPurch = document.createElement('h2');
+      purchPurch.innerHTML = response.tickets[element].ticket_value;
+      hold.appendChild(purchPurch);
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
+getNumber();
+
+
+
+// Graphic
 const areaChartOptions = {
   series: [
     {
-      name: 'Purchase Orders',
+      name: 'Tickets Solved',
       data: [31, 40, 28, 51, 42, 109, 100],
     },
     {
-      name: 'Sales Orders',
+      name: 'Tickets Received',
       data: [11, 32, 45, 32, 34, 52, 41],
     },
   ],
@@ -70,13 +81,13 @@ const areaChartOptions = {
   yaxis: [
     {
       title: {
-        text: 'Purchase Orders',
+        text: 'Tickets Solved',
       },
     },
     {
       opposite: true,
       title: {
-        text: 'Sales Orders',
+        text: 'Tickets Received',
       },
     },
   ],

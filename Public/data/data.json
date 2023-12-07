@@ -1,0 +1,18 @@
+{
+    "tickets": [
+        {
+            "ticket_month": "February",
+            "ticket_value": 40
+        },
+
+        {
+            "ticket_month": "April",
+            "ticket_value": 51
+        },
+
+        {
+            "ticket_month": "June",
+            "ticket_value": 109
+        }
+    ]
+}
